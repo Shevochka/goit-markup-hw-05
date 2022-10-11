@@ -60,9 +60,19 @@
         <section class=" hero section">
             <div class="container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="hero-btn ">Замовити послугу</button>
+                <button type="button" class="hero-btn" width="18px" height="18px" data-modal-open >Замовити послугу</button>
             </div>
         </section>
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="btn_close "data-modal-close>
+                    <svg class="icon-close">
+                        <use></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
         <!-- Features -->
 
@@ -122,18 +132,37 @@
             <div class="container">
                 <h2 class="occupation__title">Чим ми займаємося</h2>
                 <ul class="occupation-list list">
-                    <li>
-                        <img class="occupation-list__photo" src="./images/ocuoation_1.jpg" alt="Чим ми займаємось"
-                            width="370" height="294" />
+
+                    <li class="occupation-list__item">
+                        <a href="" class="occupation-list__link">
+                            <img class="occupation-list__photo" src="./images/ocuoation_1.jpg" alt="Чим ми займаємось"
+                                width="370" height="294" />
+                            <p class="occupation-list__text">
+                                Десктопні додатки
+                            </p>
+                        </a>
                     </li>
-                    <li>
-                        <img class="occupation-list__photo" src="./images/ocuoation_2.jpg" alt="Чим ми займаємось"
-                            width="370" height="294" />
+
+                    <li class="occupation-list__item">
+                        <a href="" class="occupation-list__link">
+                            <img class="occupation-list__photo" src="./images/ocuoation_2.jpg" alt="Чим ми займаємось"
+                                width="370" height="294" />
+                            <p class="occupation-list__text">
+                                Мобільні додатки
+                            </p>
+                        </a>
                     </li>
-                    <li>
-                        <img class="occupation-list__photo" src="./images/ocuoation_3.jpg" alt="Чим ми займаємось"
-                            width="370" height="294" />
+
+                    <li class="occupation-list__item">
+                        <a href="" class="occupation-list__link">
+                            <img class="occupation-list__photo" src="./images/ocuoation_3.jpg" alt="Чим ми займаємось"
+                                width="370" height="294" />
+                            <p class="occupation-list__text">
+                                Дизайнерські рішення
+                            </p>
+                        </a>
                     </li>
+
                 </ul>
             </div>
 
@@ -414,6 +443,7 @@
         </div>
 
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

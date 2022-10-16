@@ -265,7 +265,7 @@ img {
   min-width: 216px;
   color: var(--white-primary-color);
   background-color: var(--background-btn-color);
-  transition: all 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 .hero-btn:hover,
 .hero-btn:focus {

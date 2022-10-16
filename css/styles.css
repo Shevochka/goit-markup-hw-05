@@ -65,7 +65,6 @@ address {
 }
 
 body {
-  
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
   background-color: var(--white-primary-color);
@@ -174,7 +173,7 @@ img {
   letter-spacing: 0.02em;
   padding: 32px 0 32px 0;
   color: var(--title-text-color);
-  transition: all 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .header-list__link:hover,
@@ -210,7 +209,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   font-style: normal;
-  transition:all 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .header-info__mail:hover,
@@ -290,7 +289,6 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--background-color-team);
-  
 }
 
 .features__title {
@@ -414,8 +412,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #afb1b8; 
-  transition:all 250ms var(--timing-function) ;
+  fill: #afb1b8;
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .team-soc-link:hover,
@@ -437,24 +435,32 @@ img {
   margin-bottom: 50px;
   color: var(--title-text-color);
 }
+.clients-box{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .clients-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
-.clients-link {
+.clients-item{
   width: 170px;
   height: 92px;
-
-  border-width: thin;
-  display: flex;
+}
+.clients-link {
+ display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition:all 250ms var(--timing-function);
+  transition: border 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .clients-link-icon {
   fill: currentColor;
@@ -554,7 +560,7 @@ img {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
-  transition:background-color 250ms var(--timing-function) ;
+  transition: background-color 250ms var(--timing-function);
 }
 .footer-soc-icon {
   fill: var(--white-primary-color);
@@ -562,7 +568,6 @@ img {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: var(--accent-color);
-  
 }
 
 /* _____________________________________Menu BUTTONS Portfolio_________________________ */
@@ -582,7 +587,7 @@ img {
   padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--background-color-team);
-  transition: all 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), filter 250ms var(--timing-function);
 }
 
 .menu-list__btn:hover,
@@ -590,7 +595,6 @@ img {
   background-color: var(--accent-color);
   color: var(--white-primary-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  
 }
 /* ----------------Portfolio Project List Portfolio--------------------- */
 .project-list {
@@ -641,8 +645,10 @@ img {
   overflow: hidden;
 }
 
-.project-link:hover .overlay-thumb {
+.project-link:hover .overlay-thumb, 
+.project-link:focus .overlay-thumb  {
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .overlay-thumb {
@@ -654,7 +660,7 @@ img {
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  transition: 250ms var(--timing-function);
+  transition:transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 
 .overlay-text {
@@ -668,10 +674,7 @@ img {
   padding: 63px 24px;
   color: var(--white-primary-color);
 }
-.project-list .link:hover .overlay-thumb{
-  bottom: 0;
-  transform: translateY(0%);
-}
+
 /* ___________________________BACKDROP__________________________ */
 
 .backdrop {
@@ -704,16 +707,17 @@ img {
 
 .btn_close {
   position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
-  margin: 8px;
   background-color: var(--white-primary-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 .btn_close:hover,
 .btn_close:focus {
@@ -722,5 +726,4 @@ img {
 }
 .icon-close {
   fill: currentColor;
- 
 }

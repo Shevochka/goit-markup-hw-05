@@ -54,14 +54,20 @@ h5,
 h6 {
   margin: 0;
 }
+
 button {
   display: block;
   cursor: pointer;
   border: none;
   border-radius: 4px;
 }
+
 address {
   font-style: normal;
+}
+
+textarea{
+  resize: none;
 }
 
 body {
@@ -535,6 +541,7 @@ img {
 
 .footer-soc {
   display: block;
+  margin-right: 93px;
 }
 
 .footer-soc-title {
@@ -727,3 +734,4 @@ img {
 .icon-close {
   fill: currentColor;
 }
+
